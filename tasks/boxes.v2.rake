@@ -172,6 +172,11 @@ namespace :boxes do
           new(:wheezy64,
               :wheezy, 'amd64', chef: false, puppet: puppet, babushka: babushka, salt: false)
 
+        desc 'Build an Debian Wheezy PPC 64 bits box'
+        BuildDebianBoxTaskV2.
+          new(:wheezyPPC,
+              :wheezy, 'powerpc', chef: false, puppet: puppet, babushka: babushka, salt: false)
+
         desc 'Build an Debian Sid/unstable 64 bits box'
         BuildDebianBoxTaskV2.
           new(:sid64,
